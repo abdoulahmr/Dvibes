@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> DVibes</title>
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='stylesheet/cours-list.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='stylesheet/preloader.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='stylesheet/navbar.css')}}">
+
+    </head>
+    <body>
+        <div class="preloader" id="preloader">
+            <div class="anim-box">
+                <div class="anim-interieur">
+                    <div class="rect rect1"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect3"></div>
+                    <div class="rect rect4"></div>
+                    <div class="rect rect5"></div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="menu">
+                <button type="button" onclick="NavBarMenu()"><i class="fas fa-bars"></i></button>
+            </div>
+            <div class="logo">
+                <a href="/"><img src="../../static/assets/2-removebg-preview.png" id="logo"></a>
+            </div>
+            <div class="links">
+                <ul id="elements-links">
+                    <li><a href="/news">News</a></li>
+                    <li><a href="/events">Events</a></li>
+                    <li><a href="/user/cours">Courses</a></li>
+                    <li><a href="/coaches">Coaches</a></li>
+                    {% if log == None %}
+                        <li><a href="/becoach">Become a coach</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="logins">
+                <ul id="elements-logins">
+                    {% if log == True %}
+                        <li><a href="/profile-check" class="account_icon">{{info}}</a></li>
+                        <li><a href="/logout-check" class="logout">Log out</a></li>
+                    {% else %}
+                        <li><a href="/login" id="login">Log in</a></li>
+                        <li><a href="/singup" id="singup">Sing up</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search..." required>
+            <button type="button" id="search-btn" onclick="searchAndRedirect()">Search</button>
+        </div>
+        <div class="playlist">
+                {% for course in courses %}
+                    <a href="/user/cours/overview:{{course[0]}}">
+                        <div class="cours">
+                            <img src="/{{course[6]}}" id="cover">
+                            <p id="title">{{course[2]}}</p>
+                            <p id="type">{{course[3]}}</p>
+                            <p id="price">{{course[4]}} DA</p>
+                            <p id="coach">{{course[7]}}</p>
+                        </div>
+                    </a>
+                {% endfor %}
+        </div>
+    </body>
+    <script>
+        let loader = document.getElementById("preloader");
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+        })
+        function searchAndRedirect() {
+            const searchInput = document.getElementById('search-input');
+            const searchTerm = searchInput.value;
+            const url = `/user/cours/search:${encodeURIComponent(searchTerm)}`;
+            window.location.href = url;
+          }
+    </script>
+</html>

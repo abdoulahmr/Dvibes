@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> DVibes</title>
+        <link rel="icon" href="../../static/assets/Untitled design.png"/>
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='stylesheet/preloader.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='stylesheet/becoach.css')}}">
+        <script src="{{ url_for('static',filename='script.js/MultiStep.js')}}" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="preloader" id="preloader">
+            <div class="anim-box">
+                <div class="anim-interieur">
+                    <div class="rect rect1"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect3"></div>
+                    <div class="rect rect4"></div>
+                    <div class="rect rect5"></div>
+                </div>
+            </div>
+        </div>
+        <div class="head">
+            <div class="links left">
+                <a href="/news">News</a>
+                <a href="/events">Events</a>
+            </div>
+            <div class="logo">
+                <a href="/"><img class="logo" src="../../static/assets/2-removebg-preview-coach-removebg-preview.png"></a>
+            </div>
+            <div class="links right">
+                <a href="/user/cours">Course</a>
+                <a href="/singup">Explorer</a>
+            </div>
+        </div>
+        <hr>
+        <form method="post" enctype="multipart/form-data">
+            <div class="container">
+                <div class="tab-1" id="tab-1">
+                    <p id="title">Create Account</p>
+                    <input type="text" class="input email" name="email" placeholder="Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+                    <div class="error">
+                        {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <p>{{message}}</p>
+                                {% endfor %}
+                            {% endif %}
+                        {% endwith %}
+                    </div>
+                    <input type="button" class="input next" onclick="NextTab()" value="Next">
+                </div>
+                <div class="tab-2" id="tab-2">
+                    <p id="title">Personal Info</p>
+                    <input type="text" class="input fullname" name="fullname" placeholder="Full Name" required>
+                    <p class="lable gender">Gender</p>
+                    <input type="Radio" name="check" value="male" class="check">Male
+                    <input type="Radio" name="check" value="female" class="check">Female
+                    <p class="lable bday">Birthday </p>
+                    <input type="date" class="input bday" name="bday" required>
+                    <input type="text" class="input resume" name="resume" placeholder="What you can do?" required>
+                    <p class="lable cv">Resume</p>
+                    <input type="file" class="file" name="file" required>
+                    <input type="button" class="input previous" onclick="PreviousTab()" value="Previous">
+                    <input type="submit" class="input submit" value="Submit">
+                </div>
+            </div>
+        </form>
+    </body>
+    <script>
+        let loader = document.getElementById("preloader");
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+        })
+    </script>
+</html>

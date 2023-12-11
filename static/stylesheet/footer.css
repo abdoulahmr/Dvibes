@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+@media screen and (min-width: 480px){
+    footer{
+        width: 100%;
+        background-color: #000 ;
+    }
+    .row{
+        display: flex;
+        margin-top: 2%;
+    }
+    .rowtwo{
+        justify-content: right;
+    }
+    .footer_logo{
+        width: 45%;
+        height: 30vh;
+    }
+    .footer_logo img{
+        width: 20%;
+        margin: 5%;
+    }
+    .explorer,.coach{
+        margin-left: 5%;
+        width: 20%;
+        height: 30vh;
+    }
+    .explorer *,.coach *{
+        display: block;
+        font-size: 100%;
+    }
+    footer span{
+        border-bottom: #999 solid 1px;
+        margin-top: 20%;
+        color: #999;
+        padding-bottom: 5%;
+        display: block;
+    }
+    .explorer a,.coach a{
+        color: #fff;
+        margin-top: 5%;
+    }
+    .contact{
+        width: 25%;
+        margin-top: 5%;
+        color: #fff;
+        line-height: 200%;
+    }
+    .sm{
+        width: 20%;
+        margin-right: 5%;
+    }
+    .sm img{
+        margin: 2%;
+        width: 10%;
+        display: inline;
+    }
+    .rowthree{
+        border-top: #323237 solid 1px;
+    }
+    .copyright{
+        width: 100%;
+    }
+    .copyright p{
+        color: #999;
+        font-size: 80%;
+        margin: 2%;
+    }
+}
+@media screen and (max-width: 480px){
+    footer{
+        width: 100%;
+        background-color: #000;
+        color: #fff;
+    }
+    footer span{
+        border-bottom: #999 solid 1px;
+        margin-top: 20%;
+        color: #999;
+        padding-bottom: 5%;
+        display: block;
+    }
+    .row{
+        display: flex;
+        width: 100%;
+    }
+    .footer_logo{
+        padding: 5%;
+        width: 50%;
+        height: fit-content;
+    }
+    .footer_logo img{
+        width: 100%;
+    }
+    .explorer,.coach{
+        width: 20%;
+        margin: 0 2.5%;
+    }
+    .explorer a,.coach a{
+        display: block;
+        color: #fff;
+        padding: 10% 0;
+    }
+    .contact{
+        width: 60%;
+    }
+    .sm{
+        width: 35%;
+        margin-right: 5%;
+    }
+    .sm img{
+        width: 20%;
+    }
+}

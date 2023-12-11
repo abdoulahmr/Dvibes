@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" id="title-icon">
+        <title> DVibes</title>
+        <link rel="icon" href="../../static/assets/Untitled design.png"/>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='stylesheet/preloader.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='stylesheet/sidebar.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='stylesheet/adminmain.css')}}">
+    </head>
+    <body>
+        <div class="preloader" id="preloader">
+            <div class="anim-box">
+                <div class="anim-interieur">
+                    <div class="rect rect1"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect3"></div>
+                    <div class="rect rect4"></div>
+                    <div class="rect rect5"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row one">
+                <div class="admin_title">
+                    <p><b>Admin<br>Dashboard</b></p>
+                </div>
+                <a href="/admin/payment-manager"><div class="cell pay_man">
+                    <img src="../../static/assets/credit-card.png" id="icon">
+                    <p><b>Payment<br>Manager</b></p>
+                </div></a>
+            </div>
+            <div class="row">
+                <a href="/admin/events-manager"><div class="cell eve_man">
+                    <img src="../../static/assets/alternate-calendar.png" id="icon">
+                    <p><b>Events<br>Manager</b></p>
+                </div></a>
+                <a href="/admin/news-manager"><div class="cell news_man">
+                    <img src="../../static/assets/newspaper.png" id="icon">
+                    <p><b>News<br>Manager</b></p>
+                </div></a>
+            </div>
+            <div class="row">
+                <a href="/admin/coach-manager"><div class="cell coach_man">
+                    <img src="../../static/assets/training.png" id="icon">
+                    <p><b>Coach<br>Manager</b></p>
+                </div></a>
+                <a href="/admin/coach-requests"><div class="cell coach_req">
+                    <img src="../../static/assets/request-approval.png" id="icon">
+                    <p><b>Coach<br>Requests</b></p>
+                </div></a>
+            </div>
+            <div class="row">
+                <a href="/admin/course-manager"><div class="cell course_man">
+                    <img src="../../static/assets/training-courses.png" id="icon">
+                    <p><b>Course<br>Manager</b></p>
+                </div></a>
+                <a href="/logout-admin"><div class="cell logout">
+                    <img src="../../static/assets/logout.png" id="icon">
+                    <p><b>Log<br>Out</b></p>
+                </div></a>
+            </div>
+        </div>
+    </body>
+    <script>
+        let loader = document.getElementById("preloader");
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+        })
+    </script>
+</html>
