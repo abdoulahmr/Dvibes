@@ -10,7 +10,11 @@
 
 <div align="center">
 
+<br>
+<br>
 ![Screenshot of DVibes](https://raw.githubusercontent.com/abdoulahmr/portfolio/main/assets/img/dvibes.PNG)
+<br>
+<br>
 
 </div>
 
