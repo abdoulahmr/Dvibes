@@ -1,10 +1,18 @@
 # DVibes
 
-![Alt text](static/assets/1x-removebg-preview-coach-removebg-preview.png)
+<div align="center">
+
+![Alt text](static/assets/1x-removebg-preview.png)
+
+</div>
 
 **DVibes** is the first Algerian musical learning platform that allows users to learn, explore, and enhance their musical skills through various courses and resources. Whether you're a beginner or looking to improve your expertise, DVibes offers a rich collection of materials to help you along your musical journey.
 
+<div align="center">
+
 ![Screenshot of DVibes](https://raw.githubusercontent.com/abdoulahmr/portfolio/main/assets/img/dvibes.PNG)
+
+</div>
 
 ## Table of Contents
 
