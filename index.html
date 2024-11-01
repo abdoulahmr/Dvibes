@@ -23,28 +23,20 @@
                 <button type="button" onclick="NavBarMenu()"><i class="fas fa-bars"></i></button>
             </div>
             <div class="logo">
-                <a href="/"><img src="../../static/assets/2-removebg-preview.png" id="logo"></a>
+                <a href="/"><img src="static/assets/2-removebg-preview.png" id="logo"></a>
             </div>
             <div class="links">
                 <ul id="elements-links">
-                    <li><a href="/news">News</a></li>
-                    <li><a href="/events">Events</a></li>
-                    <li><a href="/user/cours">Courses</a></li>
-                    <li><a href="/coaches">Coaches</a></li>
-                    {% if log == None %}
-                        <li><a href="/becoach">Become a coach</a></li>
-                    {% endif %}
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Coaches</a></li>
                 </ul>
             </div>
             <div class="logins">
                 <ul id="elements-logins">
-                    {% if log == True %}
-                        <li><a href="/profile-check" class="account_icon">{{info}}</a></li>
-                        <li><a href="/logout-check" class="logout">Log out</a></li>
-                    {% else %}
-                        <li><a href="/login" id="login">Log in</a></li>
-                        <li><a href="/singup" id="singup">Sing up</a></li>
-                    {% endif %}
+                    <li><a href="/login" id="login">Log in</a></li>
+                    <li><a href="/singup" id="singup">Sing up</a></li>
                 </ul>
             </div>
         </nav>
@@ -74,20 +66,20 @@
                 <br><br>
                 <button data-aos="zoom-in" onclick="ScrollTo('section-2')">LEARN MORE</button>
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat">
-                <img src="../../static/assets/laptop.png" data-aos="slide-up" id="laptop">
-                <img src="../../static/assets/idk-removebg-preview.png" data-aos="fade-down-right" class="img idk">
-                <img src="../../static/assets/banjo-removebg-preview.png" data-aos="fade-right" class="img banjo">
-                <img src="../../static/assets/piano-removebg-preview.png" data-aos="fade-left" class="img piano">
-                <img src="../../static/assets/sax-removebg-preview.png" data-aos="fade-down-right" class="img sax">
-                <img src="../../static/assets/Accordion-removebg-preview.png" data-aos="fade-down-left" class="img acc">
-                <img src="../../static/assets/drum-removebg-preview.png" data-aos="fade-down-left" class="img drum">
+                <img src="static/assets/laptop.png" data-aos="slide-up" id="laptop">
+                <img src="static/assets/idk-removebg-preview.png" data-aos="fade-down-right" class="img idk">
+                <img src="static/assets/banjo-removebg-preview.png" data-aos="fade-right" class="img banjo">
+                <img src="static/assets/piano-removebg-preview.png" data-aos="fade-left" class="img piano">
+                <img src="static/assets/sax-removebg-preview.png" data-aos="fade-down-right" class="img sax">
+                <img src="static/assets/Accordion-removebg-preview.png" data-aos="fade-down-left" class="img acc">
+                <img src="static/assets/drum-removebg-preview.png" data-aos="fade-down-left" class="img drum">
             </div>
         </section>
         <hr data-aos="fade">
         <section id="section-2">
             <div class="services">
                 <div class="service-img">
-                    <img data-aos="fade-right" src="../../static/assets/listen.png" class="listen">
+                    <img data-aos="fade-right" src="static/assets/listen.png" class="listen">
                 </div>
                 <div class="service-cards">
                     <div class="service-title-div">
@@ -98,7 +90,7 @@
                     <div class="service-card-div">
                         <div class="service-card" data-aos="fade-up">
                             <div class="service-card-img" >
-                                <img src="../../static/assets/broadcast.png">
+                                <img src="static/assets/broadcast.png">
                             </div>
                             <div class="service-card-content">
                                 <h2>Check out Leatest news and events</h2>
@@ -108,7 +100,7 @@
                         </div>
                         <div class="service-card" data-aos="fade-up">
                             <div class="service-card-img">
-                                <img src="../../static/assets/online-learning.png">
+                                <img src="static/assets/online-learning.png">
                             </div>
                             <div class="service-card-content">
                                 <h2>Learn or emprove your musical skils</h2>
@@ -118,7 +110,7 @@
                         </div>
                         <div class="service-card" data-aos="fade-up">
                             <div class="service-card-img">
-                                <img src="../../static/assets/whistle.png">
+                                <img src="static/assets/whistle.png">
                             </div>
                             <div class="service-card-content">
                                 <h2>Meet the best musical coach</h2>
@@ -134,7 +126,7 @@
         <section id="section-3">
             <div class="news">
                 <div class="news-title">
-                    <img src="../../static/assets/undraw_content_re_33px.svg" data-aos="fade">
+                    <img src="static/assets/undraw_content_re_33px.svg" data-aos="fade">
                     <span data-aos="slide-right"><b>Check out Leatest news and events</b></span>
                     <label data-aos="slide-right">Stay in the loop with the latest happenings and exciting events and find out what's new and noteworthyat Dvibes!</label>
                 </div>
@@ -148,15 +140,14 @@
                 </div>
                 <div class="news-marque" data-aos="fade">
                     <marquee>
-                        {% for element in data %}
                         <div class="card">
-                            <div class="image" style="background-image: url('/{{element[4]}}')"></div>
+                            <div class="image" style="background-image: url('https://picsum.photos/id/237/300/300')"></div>
                             <div class="content">
-                            <a href="/news:{{element[0]}}" >
-                                <span class="title"><b>{{element[1]}}</b></span>
+                            <a href="#" >
+                                <span class="title"><b>Some Cool event</b></span>
                             </a>
-                            <p class="desc">{{element[2]}}</p>
-                            <a href="/news:{{element[0]}}" class="action">
+                            <p class="desc">That's the cool event description</p>
+                            <a href="#" class="action">
                                 Find out more
                                 <span aria-hidden="true">
                                 →
@@ -164,7 +155,51 @@
                             </a>
                             </div>
                         </div>
-                        {% endfor %}
+                        <div class="card">
+                            <div class="image" style="background-image: url('https://picsum.photos/id/237/300/300')"></div>
+                            <div class="content">
+                            <a href="#" >
+                                <span class="title"><b>Some Cool event</b></span>
+                            </a>
+                            <p class="desc">That's the cool event description</p>
+                            <a href="#" class="action">
+                                Find out more
+                                <span aria-hidden="true">
+                                →
+                                </span>
+                            </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image" style="background-image: url('https://picsum.photos/id/237/300/300')"></div>
+                            <div class="content">
+                            <a href="#" >
+                                <span class="title"><b>Some Cool event</b></span>
+                            </a>
+                            <p class="desc">That's the cool event description</p>
+                            <a href="#" class="action">
+                                Find out more
+                                <span aria-hidden="true">
+                                →
+                                </span>
+                            </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image" style="background-image: url('https://picsum.photos/id/237/300/300')"></div>
+                            <div class="content">
+                            <a href="#" >
+                                <span class="title"><b>Some Cool event</b></span>
+                            </a>
+                            <p class="desc">That's the cool event description</p>
+                            <a href="#" class="action">
+                                Find out more
+                                <span aria-hidden="true">
+                                →
+                                </span>
+                            </a>
+                            </div>
+                        </div>
                     </marquee>
                 </div>
             </div>
@@ -177,20 +212,20 @@
                 </div>
                 <div class="course-type-container" data-aos="slide-up">
                     <div class="course-type-container-row1">
-                        <div class="course-type-container-img"><a href="/user/cours/search-category:piano"><img  class="test" src="../../static/assets/piano.png"></a></div>
-                        <div class="course-type-container-img"><a href="/user/cours/search-category:drum"><img  class="test" src="../../static/assets/drum.png"></a></div>
-                        <div class="course-type-container-img"><a href="/user/cours/search-category:flut"><img  class="test" src="../../static/assets/flut.png"></a></div>
-                        <div class="course-type-container-img"><a href="/user/cours/search-category:guitar"><img  class="test" src="../../static/assets/guitar.png"></a></div>
-                        <div class="course-type-container-img"><a href="/user/cours/search-category:saxophone"><img  class="test" src="../../static/assets/sax.png"></a></div>
-                        <div class="course-type-container-img"><a href="/user/cours/search-category:violent"><img  class="test" src="../../static/assets/violent.png"></a></div>
+                        <div class="course-type-container-img"><a href="#"><img  class="test" src="static/assets/piano.png"></a></div>
+                        <div class="course-type-container-img"><a href="#"><img  class="test" src="static/assets/drum.png"></a></div>
+                        <div class="course-type-container-img"><a href="#"><img  class="test" src="static/assets/flut.png"></a></div>
+                        <div class="course-type-container-img"><a href="#"><img  class="test" src="static/assets/guitar.png"></a></div>
+                        <div class="course-type-container-img"><a href="#"><img  class="test" src="static/assets/sax.png"></a></div>
+                        <div class="course-type-container-img"><a href="#"><img  class="test" src="static/assets/violent.png"></a></div>
                     </div>
                     <div class="course-type-container-row2">
-                        <div class="course-type-container-img"><a href="/user/cours/search-category:accordion"><img  class="test" src="../../static/assets/Accordion.png"></a></div>
-                        <div class="course-type-container-img"><a href="/user/cours/search-category:banjo"><img  class="test" src="../../static/assets/banjo.png"></a></div>
-                        <div class="course-type-container-img"><a href="/user/cours/search-category:electrical guitar"><img  class="test" src="../../static/assets/guitar2.png"></a></div>
-                        <div class="course-type-container-img"><a href="/user/cours/search-category:harp"><img  class="test" src="../../static/assets/harp.png"></a></div>
-                        <div class="course-type-container-img"><a href="/user/cours/search-category:clarinet"><img  class="test" src="../../static/assets/idk.png"></a></div>
-                        <div class="course-type-container-img"><a href="/user/cours/search-category:trumpet"><img  class="test" src="../../static/assets/trumpet.png"></a></div>
+                        <div class="course-type-container-img"><a href="#"><img  class="test" src="static/assets/Accordion.png"></a></div>
+                        <div class="course-type-container-img"><a href="#"><img  class="test" src="static/assets/banjo.png"></a></div>
+                        <div class="course-type-container-img"><a href="#"><img  class="test" src="static/assets/guitar2.png"></a></div>
+                        <div class="course-type-container-img"><a href="#"><img  class="test" src="static/assets/harp.png"></a></div>
+                        <div class="course-type-container-img"><a href="#"><img  class="test" src="static/assets/idk.png"></a></div>
+                        <div class="course-type-container-img"><a href="#"><img  class="test" src="static/assets/trumpet.png"></a></div>
                     </div>
                 </div>
             </div>
@@ -198,30 +233,50 @@
         <hr data-aos="fade">
         <section id="section-5">
             <div class="coaches">
-                <img src="../../static/assets/undraw_teaching_re_g7e3.svg" data-aos="slide-right"></img>
+                <img src="static/assets/undraw_teaching_re_g7e3.svg" data-aos="slide-right"></img>
                 <div class="coaches-title" data-aos="slide-down">
                     <span>Unlock Your Full Potential with Our Expert Coaches - Join Now</span>
                 </div>
                 <div class="coaches-container" data-aos="slide-up">
-                {% for coach in coaches %}
-                <div class="coach-card" >
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="card-inner">
-                        <div class="card-inner-img">
-                            {% if coach[3] == "None"%}
-                            <img src="../../static/assets/user.png"></img>
-                            {% else %}
-                            <img src="{{coach[3]}}"></img>
-                            {% endif %}
-                        </div>
-                        <div class="card-inner-content">
-                            <lable>{{coach[2]}}</label>
-                            <a href="/coaches:{{coach[0]}}">View coach profile</a>
+                    <div class="coach-card" >
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="card-inner">
+                            <div class="card-inner-img">
+                                <img src="static/assets/user.png"></img>
+                            </div>
+                            <div class="card-inner-content">
+                                <lable>jhon Doe</label>
+                                <a href="#">View coach profile</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                {% endfor %}
+                    <div class="coach-card" >
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="card-inner">
+                            <div class="card-inner-img">
+                                <img src="static/assets/user.png"></img>
+                            </div>
+                            <div class="card-inner-content">
+                                <lable>jhon Doe</label>
+                                <a href="#">View coach profile</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coach-card" >
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="card-inner">
+                            <div class="card-inner-img">
+                                <img src="static/assets/user.png"></img>
+                            </div>
+                            <div class="card-inner-content">
+                                <lable>jhon Doe</label>
+                                <a href="#">View coach profile</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -229,7 +284,7 @@
     <footer>
         <div class="row rowone">
             <div class="footer_logo">
-                <a href="/"><img src="../../static/assets/2x-removebg-preview.png"></a>
+                <a href="/"><img src="static/assets/2x-removebg-preview.png"></a>
             </div>
             <div class="explorer">
                 <span>Explorer</span>
@@ -247,8 +302,8 @@
             </div>
             <div class="sm">
                 <span>follow us</span>
-                <a href="https://www.facebook.com/dvibeslildeep" target="_blank"><img src="../../static/assets/facebook.png"></a>
-                <a href="https://www.instagram.com/dvibes.official/" target="_blank"><img src="../../static/assets/instagram.png"></a>
+                <a href="#" target="_blank"><img src="static/assets/facebook.png"></a>
+                <a href="#" target="_blank"><img src="static/assets/instagram.png"></a>
             </div>
         </div>
         <div class="row rowthree">
